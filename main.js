@@ -1,4 +1,4 @@
-var listOfProducts;
+
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -26,22 +26,24 @@ function addProductsToWebpage() {
             productDivs.appendChild(productInfo);        
         }
         
-        document.body.appendChild(productDivs);
+        document.getElementById("card1").appendChild(productDivs);
     
         console.log(listOfProducts);
-        function createProductInfo(){
-            var productInfoContainer = document.createElement("div");
-            productInfoContainer.className = "productInfoContainer";
-    
-            var getProductImage = document.createElement("img");
-            getProductImage.src = listOfProducts.image;
+        
+        // Add your code here, remember to brake your code in to smaller function blocks
+        // to reduce complexity and increase readability. Each function should have
+        // an explainetory comment like the one for this function, see row 22.
+        
+        // TODO: Remove the console.log and these comments when you've read them.
+    }
 
-        }
-    console.log(listOfProducts);
+    function createProductInfo(product){
+        var productInfoContainer = document.createElement("div");
+        productInfoContainer.className = "productInfoContainer";
 
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
-}
+        var getProductImage = document.createElement("img");
+        getProductImage.src = "./assets/" + product.image;
+        productInfoContainer.appendChild(getProductImage);
+
+        return productInfoContainer;
+    }
