@@ -15,12 +15,28 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
-    // This would also be a good place to initialize other parts of the UI
+    // This would also be a good place to initialize other parts of the UI kjgjfg,
 }
-
+eedwadwa
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
+        var productDivs = document.createElement("div");
+        productDivs.className = "productContainers";
+        for (var i = 0; i < listOfProducts.length; i++){
+            var productInfo = createProductInfo(listOfProducts[i]);
+            productDivs.appendChild(productInfo);        
+        }
+        
+        document.body.appendChild(productDivs);
+    
+        console.log(listOfProducts);
+        function createProductInfo(){
+            var productInfoContainer = document.createElement("div");
+            productInfoContainer.className = "productInfoContainer";
+    
+            var getProductImage = document.createElement("img");
+            getProductImage.src = listOfProducts.image;
+        }
     console.log(listOfProducts);
 
     // Add your code here, remember to brake your code in to smaller function blocks
