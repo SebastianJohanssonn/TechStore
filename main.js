@@ -26,7 +26,7 @@ function addProductsToWebpage() {
             productDivs.appendChild(productInfo);        
         }
         
-        document.getElementById("card1").appendChild(productDivs);
+        document.querySelector("main").appendChild(productDivs);
     
         console.log(listOfProducts);
         
@@ -44,6 +44,18 @@ function addProductsToWebpage() {
         var getProductImage = document.createElement("img");
         getProductImage.src = "./assets/" + product.image;
         productInfoContainer.appendChild(getProductImage);
+
+        var getProductTitle = document.createElement("h3");
+        getProductTitle.innerText = product.title;
+        productInfoContainer.appendChild(getProductTitle);
+
+        var getProductDescription = document.createElement("p");
+        getProductDescription.innerText = product.description;
+        productInfoContainer.appendChild(getProductDescription);
+
+        var getProductPrice = document.createElement("p");
+        getProductPrice.innerText = product.price + " kr";
+        productInfoContainer.appendChild(getProductPrice);
 
         return productInfoContainer;
     }
