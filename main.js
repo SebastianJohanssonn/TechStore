@@ -17,7 +17,6 @@ function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI kjgjfg,
 }
-eedwadwa
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
         var productDivs = document.createElement("div");
@@ -36,6 +35,7 @@ function addProductsToWebpage() {
     
             var getProductImage = document.createElement("img");
             getProductImage.src = listOfProducts.image;
+
         }
     console.log(listOfProducts);
 
