@@ -68,21 +68,6 @@ function addProductsToWebpage() {
 
         return productInfoContainer;
     }
-function clickcounter(){
-    if (typeof(Storage) !== btn-primary){
-        if (localStorage.clickcount){
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else{
-            localStorage.clickcount = 1;
-        }
-        document.getElementsByClassName(cart2).innerHTML = "Du har i varukorgen" + localStorage.clickcount + "time(s).";
-    }
-    var Storage = localStorage;
-}
-console.log(localStorage);
-
- 
-    
 
         
     
