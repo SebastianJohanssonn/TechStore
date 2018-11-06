@@ -69,6 +69,5 @@ function addProductsToWebpage() {
         return productInfoContainer;
     }
 
-
         
     
