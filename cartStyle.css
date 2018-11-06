@@ -53,3 +53,9 @@ img{
 p{
     color: darkslategrey; 
 }
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: Verdana
+}

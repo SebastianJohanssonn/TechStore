@@ -11,12 +11,11 @@
 }
 a:hover {
     color: white;
-}
-.fas {
+} 
+.cart2 {
     color: white;
     float: right;
     font-size: 1.25em;
-<<<<<<< HEAD
 }
 img {
     width: 10em;
@@ -26,9 +25,6 @@ img {
 main {
     display: flex;
     align-items: center;
-=======
-    padding-right: 0.3em;
->>>>>>> 52f69824f6a4d12c613b0bc45fe9719e71a9da34
 }
 .productContainers {
     width: 100%;
