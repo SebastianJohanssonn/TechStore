@@ -62,7 +62,7 @@ function addProductsToWebpage() {
         var cartIcon = document.createElement("i");
         cartIcon.className = "cart2 fas fa-cart-arrow-down";
         cartButton.appendChild(cartIcon);
-        var buttonText = document.createTextNode(" Lägg till i varukorgen");
+        var buttonText = document.createTextNode(" Lägg till i kundvagnen");
         cartButton.appendChild(buttonText);
         productInfoContainer.appendChild(cartButton);
 
