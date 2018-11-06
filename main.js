@@ -40,22 +40,48 @@ function addProductsToWebpage() {
     function createProductInfo(product){
         var productInfoContainer = document.createElement("div");
         productInfoContainer.className = "productInfoContainer";
-
-        var getProductImage = document.createElement("img");
-        getProductImage.src = "./assets/" + product.image;
-        productInfoContainer.appendChild(getProductImage);
-
+        
         var getProductTitle = document.createElement("h3");
         getProductTitle.innerText = product.title;
         productInfoContainer.appendChild(getProductTitle);
-
+        
         var getProductDescription = document.createElement("p");
         getProductDescription.innerText = product.description;
         productInfoContainer.appendChild(getProductDescription);
-
+        
+        var getProductImage = document.createElement("img");
+        getProductImage.src = "./assets/" + product.image;
+        productInfoContainer.appendChild(getProductImage);
+        
         var getProductPrice = document.createElement("p");
         getProductPrice.innerText = product.price + " kr";
         productInfoContainer.appendChild(getProductPrice);
 
+        var cartButton = document.createElement("button");
+        var buttonText = document.createTextNode("Lägg till i varukorgen");
+        cartButton.appendChild(buttonText);
+        productInfoContainer.appendChild(cartButton);
+
         return productInfoContainer;
     }
+
+    
+    
+/*     
+e.preventDefault();
+var $this = $(this);
+var $cart = $('#cart');
+var item_identifier = $this.data('id');
+
+/* ta bort mobilen */
+
+/* if ($this.data('in-cart')==='yes'
+&& $cart.find('li[data-id="' + item_identifier + '"]').length > 0) {
+    return
+}
+
+// lägg till i kundvagnen
+$this.data('in-cart', 'yes');
+var to_cart = $('li').data('id', item_identifier).html($this.html());
+$cart.append(to_cart);
+}); */ 
