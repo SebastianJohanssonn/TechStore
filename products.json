@@ -19,5 +19,35 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
+    },{
+        "title": "Samsung Galaxy J4+",
+        "description": " A new fluid body design and a stunning glass finish make the Galaxy J4+ a sight to behold.",
+        "image": "SGJ4+.png",
+        "price": 1990
+    },{
+        "title": "Huawei P20 Lite",
+        "description": " HUAWEI P20 Pro is once again leading the way with the revolutionary Leica Triple Camera.",
+        "image": "Huawei_p20.png",
+        "price": 2959
+    },{
+        "title": "iPhone XR",
+        "description": "The new display on iPhone XR is the most advanced LCD in the industry.",
+        "image": "iphone_xr.png",
+        "price": 11390
+    },{
+        "title": "Samsung Galaxy S9",
+        "description": "Dual Aperture F2.4/F1.5 lens adjusts to let more light in when needed, allowing you to capture the right amount of light, day or night.",
+        "image": "Samsungs9.png",
+        "price": 5929
+    },{
+        "title": "Apple iPhone XS Max",
+        "description": "Breakthrough dual-camera system. The world’s most popular camera is defining a new era of photography.",
+        "image": "iphoneXSMAX.png",
+        "price": 13990
+    },{
+        "title": "Samsung Galaxy Note9",
+        "description": "The largest battery in a Note, ever. When you have a long-lasting battery, you really can go all day and all night.",
+        "image": "note9.png",
+        "price": 10800
     }
 ]
