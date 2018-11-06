@@ -36,7 +36,7 @@ button{
     border-radius: 10%;
 }
 
-.sheck{
+.check{
     float: left;
     font-size: 0.7em;
     padding: 0.5em;
@@ -47,9 +47,11 @@ button{
     float: left;
     font-size: 0.7em;
     padding: 0.5em;
-    ;
 }
 
 img{
-    width: 30em;
+    width: 10em;
+}
+p{
+    color: darkslategrey; 
 }
