@@ -16,6 +16,7 @@ a:hover {
     color: white;
     float: right;
     font-size: 1.25em;
+<<<<<<< HEAD
 }
 img {
     width: 10em;
@@ -25,10 +26,12 @@ img {
 main {
     display: flex;
     align-items: center;
+=======
+    padding-right: 0.3em;
+>>>>>>> 52f69824f6a4d12c613b0bc45fe9719e71a9da34
 }
 .productContainers {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,5 +39,23 @@ main {
 .productInfoContainer {
     background-color: rgb(216, 216, 216);
     width: 100%;
+    height: 100%;
     text-align: center;
+    padding: 4em 0;
+    margin: 0;
+}
+img {
+    width: 13em;                                                              
+}
+p {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 13em;
+    margin: auto;
+}
+.btn-primary {
+    border-radius: 0.5em;
+}
+.cart2 {
+    padding: 0 0.5em;
 }
