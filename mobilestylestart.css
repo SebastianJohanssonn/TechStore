@@ -51,7 +51,11 @@ p {
 }
 .btn-primary {
     border-radius: 0.5em;
+    text-align: center;
 }
 .cart2 {
-    padding: 0 0.5em;
+    margin: auto;
+    padding: 0.3em 0.4em;
+    float: left;
+    font-size: 1em;
 }
