@@ -12,11 +12,19 @@
 a:hover {
     color: white;
 }
-.cart {
+.fas {
     color: white;
     float: right;
     font-size: 1.25em;
-    padding-right: 0.3em;
+}
+img {
+    width: 10em;
+
+}
+
+main {
+    display: flex;
+    align-items: center;
 }
 .productContainers {
     width: 100%;

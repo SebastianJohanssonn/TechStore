@@ -1,24 +1,22 @@
 
 .navbar {
     background-color: #212121;
-    border-radius: 0 !important;
     height: 4em;
 }
 .navbar-brand{
-    text-decoration: none;
     color: white;
-    font-size: 1.875em;
+    text-decoration: none;
     font-weight: bold;
+    font-size: 1.875em;
     font-family: Arial, Helvetica, sans-serif;
 }
 a:hover {
     color: white;
 }
 .fas {
-    float: right;
     color: white;
-    font-size: 1.85em;
-    padding-top: 0.5em;
+    float: right;
+    font-size: 1.25em;
 }
 ul{
  list-style: none;
