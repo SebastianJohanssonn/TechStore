@@ -65,10 +65,28 @@ function addProductsToWebpage() {
         var buttonText = document.createTextNode(" Lägg till i kundvagnen");
         cartButton.appendChild(buttonText);
         productInfoContainer.appendChild(cartButton);
-
+        var clickcounter = document.createAttribute("onclick");
+        clickcounter.className = "clickcounter";
         return productInfoContainer;
+
+        function clickcounter(){
+            if (typeof(Storage) !== cartButton){
+                if (localStorage.clickcount){
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else{
+                    localStorage.clickcount = 1;
+                }
+                document.getElementsByClassName(cartIcon).innerHTML = "Du har i varukorgen" + localStorage.clickcount + "time(s).";
+            }
+            
+            
+            
+        }
     }
-function clickcounter(){
+
+    
+
+/* function clickcounter(cart2){
     if (typeof(Storage) !== btn-primary){
         if (localStorage.clickcount){
             localStorage.clickcount = Number(localStorage.clickcount)+1;
@@ -79,7 +97,8 @@ function clickcounter(){
     }
     var Storage = localStorage;
     
-}
+    
+} */
 console.log(localStorage);
 
  
