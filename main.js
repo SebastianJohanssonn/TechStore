@@ -1,4 +1,4 @@
-
+var listOfProducts;
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -59,6 +59,8 @@ function addProductsToWebpage() {
 
         var cartButton = document.createElement("button");
         cartButton.className = "btn btn-primary";
+        cartButton.setAttribute("id", "addProduct");
+        cartButton.addEventListener("click", function() { addProduct(product) });
         var cartIcon = document.createElement("i");
         cartIcon.className = "cart2 fas fa-cart-arrow-down";
         cartButton.appendChild(cartIcon);
@@ -67,42 +69,34 @@ function addProductsToWebpage() {
         productInfoContainer.appendChild(cartButton);
         var clickcounter = document.createAttribute("onclick");
         clickcounter.className = "clickcounter";
+        
         return productInfoContainer;
-
-        function clickcounter(){
-            if (typeof(Storage) !== cartButton){
-                if (localStorage.clickcount){
-                    localStorage.clickcount = Number(localStorage.clickcount)+1;
-                } else{
-                    localStorage.clickcount = 1;
-                }
-                document.getElementsByClassName(cartIcon).innerHTML = "Du har i varukorgen" + localStorage.clickcount + "time(s).";
-            }
-            
-            
-            
-        }
     }
 
     
 
-/* function clickcounter(cart2){
-    if (typeof(Storage) !== btn-primary){
-        if (localStorage.clickcount){
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else{
-            localStorage.clickcount = 1;
-        }
-        document.getElementsByClassName(cart2).innerHTML = "Du har i varukorgen" + localStorage.clickcount + "time(s).";
-    }
-    var Storage = localStorage;
-    
-    
-} */
+
+
 console.log(localStorage);
+var numberOfProducts = 1;
+var shoppingcart = [];
 
- 
-    
+function cartCounter(){
+    document.getElementById("numberOfProducts").innerText = numberOfProducts;
+    numberOfProducts++;
+    if (localStorage.productArray){
+        productArray = JSON.parse(localStorage.productArray);
+    }
+    addProduct();
+}
 
+function addProduct(product){
+    shoppingcart.push(product);
+    var shoppingcartString = JSON.stringify(shoppingcart);
+    localStorage.shoppingcart = shoppingcartString;
+    console.log(localStorage.shoppingcart);
+}
+
+console.log(shoppingcart);
         
     
