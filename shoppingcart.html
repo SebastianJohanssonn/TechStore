@@ -8,11 +8,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="cartStyle.css">
-    <script src="./main.js"></script>
     <script src ="./shoppingsitejava.js"></script>
+    <script src="./main.js"></script>
     <title>TechStore</title>
 </head>
-<body>
+<body onload="listLoaded()">
     <header>
         <nav class="navbar navbar-expand">
             <div class="navbar-collapse">
@@ -26,19 +26,19 @@
         <button type="knapp" class="btn btn-info btn-lg"><i class="kundvagn fas fa-cart-arrow-down"></i>lägg till i kundvagn</button>
     </header>
     
-    <main>
+    <main id="allProducts">
         <div id="card1">
             
-            <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button>
+<!--             <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button>
         
             <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button>
         
             <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button>
         
-            <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button>
+            <button type="knapp" class="bt n btn-danger"><i class="Delete fas fa-trash-alt"></i>Ta bort</button> -->
             
         </div>
-        <button type="knapp" class="btn btn-info btn-lg"><i class="check fas fa-check"></i>Slutför ditt köp</button>
+<!--         <button type="knapp" class="btn btn-info btn-lg"><i class="check fas fa-check"></i>Slutför ditt köp</button> -->
     </main>
     
 </body>
