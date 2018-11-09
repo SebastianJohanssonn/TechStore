@@ -67,42 +67,41 @@ function addProductsToWebpage() {
         var buttonText = document.createTextNode(" Lägg till i kundvagnen");
         cartButton.appendChild(buttonText);
         productInfoContainer.appendChild(cartButton);
-        var clickcounter = document.createAttribute("onclick");
-        clickcounter.className = "clickcounter";
         
         return productInfoContainer;
     }
 
+<<<<<<< HEAD
     function calculator(price) {
         var price = listOfProducts.price
         document.getElementById("numberOfProducts").innerHTML = "total Price" + price
         console.log()
     }
 
+=======
+>>>>>>> df32c7b0d64da393f1413ed56f0d6ae9bddb5b5b
 
-console.log(localStorage);
-var numberOfProducts = 1;
 var shoppingcart = [];
-
-function cartCounter(){
-    document.getElementById("numberOfProducts").innerText = numberOfProducts;
-    numberOfProducts++;
-    if (localStorage.productArray){
-        productArray = JSON.parse(localStorage.productArray);
-    }
-    addProduct();
+if (localStorage.shoppingcart){
+    shoppingcart = JSON.parse(localStorage.shoppingcart);
 }
 
 function addProduct(product){
+    document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
     shoppingcart.push(product);
     var shoppingcartString = JSON.stringify(shoppingcart);
     localStorage.shoppingcart = shoppingcartString;
     console.log(localStorage.shoppingcart);
 }
 
+<<<<<<< HEAD
 console.log(shoppingcart);
 
 
 
 
+=======
+console.log(shoppingcart.length);
+        
+>>>>>>> df32c7b0d64da393f1413ed56f0d6ae9bddb5b5b
     
