@@ -57,5 +57,13 @@ p{
 h1{
     text-align: center;
     font-size: 60px;
-    font-family: Verdana
+    font-family: Verdana;
+}
+
+.cart2{
+    text-align: center;
+    font-size: 60px; 
+    color: #212121;
+    float: left;
+    
 }
