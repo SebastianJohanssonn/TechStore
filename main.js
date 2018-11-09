@@ -67,36 +67,24 @@ function addProductsToWebpage() {
         var buttonText = document.createTextNode(" Lägg till i kundvagnen");
         cartButton.appendChild(buttonText);
         productInfoContainer.appendChild(cartButton);
-        var clickcounter = document.createAttribute("onclick");
-        clickcounter.className = "clickcounter";
         
         return productInfoContainer;
     }
 
-    
 
-
-
-console.log(localStorage);
-var numberOfProducts = 1;
 var shoppingcart = [];
-
-function cartCounter(){
-    document.getElementById("numberOfProducts").innerText = numberOfProducts;
-    numberOfProducts++;
-    if (localStorage.productArray){
-        productArray = JSON.parse(localStorage.productArray);
-    }
-    addProduct();
+if (localStorage.shoppingcart){
+    shoppingcart = JSON.parse(localStorage.shoppingcart);
 }
 
 function addProduct(product){
+    document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
     shoppingcart.push(product);
     var shoppingcartString = JSON.stringify(shoppingcart);
     localStorage.shoppingcart = shoppingcartString;
     console.log(localStorage.shoppingcart);
 }
 
-console.log(shoppingcart);
+console.log(shoppingcart.length);
         
     
