@@ -10,16 +10,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 a:hover {
-    color: white;
+    color: #ffffff;
 } 
-.cart2 {
-    color: white;
+#numberOfProducts {
+    color: #ffffff;
+}
+.cart {
+    color: #ffffff;
     float: right;
     font-size: 1.25em;
 }
 img {
     width: 10em;
-
 }
 
 main {
@@ -32,8 +34,10 @@ main {
     flex-direction: column;
     align-items: center;
 }
+.productInfoContainer:nth-child(odd){
+    background-color: #F5F5F5
+}
 .productInfoContainer {
-    background-color: rgb(216, 216, 216);
     width: 100%;
     height: 100%;
     text-align: center;
