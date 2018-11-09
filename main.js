@@ -23,7 +23,7 @@ function addProductsToWebpage() {
         productDivs.className = "productContainers";
         for (var i = 0; i < listOfProducts.length; i++){
             var productInfo = createProductInfo(listOfProducts[i]);
-            productDivs.appendChild(productInfo);        
+            productDivs.appendChild(productInfo);      
         }
         
         document.querySelector("main").appendChild(productDivs);
@@ -73,8 +73,11 @@ function addProductsToWebpage() {
         return productInfoContainer;
     }
 
-    
-
+    function calculator(price) {
+        var price = listOfProducts.price
+        document.getElementById("numberOfProducts").innerHTML = "total Price" + price
+        console.log()
+    }
 
 
 console.log(localStorage);
@@ -98,5 +101,8 @@ function addProduct(product){
 }
 
 console.log(shoppingcart);
-        
+
+
+
+
     
