@@ -1,69 +1,93 @@
-
 .navbar {
     background-color: #212121;
     height: 4em;
-}
-.navbar-brand{
+ }
+ .navbar-brand{
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.875em;
     font-family: Arial, Helvetica, sans-serif;
-}
-a:hover {
+ }
+ a:hover {
     color: white;
-}
-.fas {
-    color: white;
-    float: right;
-    font-size: 1.25em;
-}
-ul{
+ }
+ .fas {
+    color: #FFFFFF;
+    margin-top: 0.67em;
+    margin-right: 0.3em;
+ }
+ 
+ ul{
  list-style: none;
  border: 1em;
-}
-
-.Delete{
+ }
+ 
+ .Delete{
     float: left;
     color: white;
     font-size: 0.7em;
     padding: 0.5em;
     text-align: center;
-}
-button{
-    border-radius: 10%;
-}
-
-.check{
+ }
+ 
+ .kundvagn{
     float: left;
     font-size: 0.7em;
     padding: 0.5em;
-    position: center;
-}
-
-.kundvagn{
-    float: left;
-    font-size: 0.7em;
-    padding: 0.5em;
-}
-
-img{
+ }
+ 
+ img{
     width: 10em;
-}
-p{
-    color: darkslategrey; 
-}
-
-h1{
+ }
+ p{
+    color: darkslategrey;
+ }
+ 
+ h1{
     text-align: center;
     font-size: 60px;
     font-family: Verdana;
-}
-
-.cart2{
+ }
+ 
+ .cart2{
     text-align: center;
-    font-size: 60px; 
+    font-size: 40px;
+    color: #212121;
+ }
+ #QuantityProducts{
+    margin-top: 2em;
+    margin-bottom: 3em;
+    font-size: 0.90em;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ .kundvagnContainer{
+    width: 100%;
+    text-align: center;
+ }
+ .kundvagnContainer .cart2 fas fa-shopping-cart{
+    color: black;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .knappContainer{
+    width: 100%;
+    text-align: center;
+ }
+ 
+ .btn-info {
+    color: #fff;
+    background-color: #4db8ff;
+    border-color:#4db8ff;
+ }
+ 
+ .users{
+    text-align: center;
+    font-size: 60px;
     color: #212121;
     float: left;
-    
-}
+ }
