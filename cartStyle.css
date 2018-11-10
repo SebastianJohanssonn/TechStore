@@ -90,4 +90,15 @@
     font-size: 60px;
     color: #212121;
     float: left;
+<<<<<<< HEAD
  }
+=======
+    
+}
+.users{
+    text-align: center;
+    font-size: 60px; 
+    color: #212121;
+    float: left;
+}
+>>>>>>> 2b9a5740b1c9ad9829caa9b043c1524e8d271242
