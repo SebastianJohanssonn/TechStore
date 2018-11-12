@@ -7,7 +7,7 @@ function listLoaded() {
 
     
     cartProductsWeb(productCartList);
-    calculator();
+    /* calculator(); */
     
 
 
@@ -21,10 +21,10 @@ function cartProductsWeb(productInCart){
     productsInRow = productsInline();
 
     for(var i = 0; i < productInCart; i++) {
-        allproductdiv = (productInCart[i]);
-        titlesList = (productInCart[i]);
-        priceList = (productInCart[i]);
-        imageList = (productInCart[i]);
+        allproductdiv(productInCart[i]);
+        titlesList(productInCart[i]);
+        priceList(productInCart[i]);
+        imageList(productInCart[i]);
         
         productsInRow.appendChild(allproductdiv);
     }
@@ -34,13 +34,13 @@ function cartProductsWeb(productInCart){
     
 
 }
-function calculator() {
+/* function calculator() {
     var numOfProducts = document.getElementById("cart1");
     var stringcart = localStorage.getItem("shoppingcart");
     var JsonCart = JSON.parse(stringcart);
     numOfProducts.innerText = JsonCart.length;
     
-}
+} */
 function productsInline(){
     inlineProducts = document.createElement("div");
     inlineProducts.classList.add("container", "justify-content-center", "divRow");
