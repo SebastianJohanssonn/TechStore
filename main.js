@@ -71,15 +71,12 @@ function addProductsToWebpage() {
         return productInfoContainer;
     }
 
-<<<<<<< HEAD
     function calculator(price) {
         var price = listOfProducts.price
         document.getElementById("numberOfProducts").innerHTML = "total Price" + price
         console.log()
     }
 
-=======
->>>>>>> df32c7b0d64da393f1413ed56f0d6ae9bddb5b5b
 
 var shoppingcart = [];
 if (localStorage.shoppingcart){
@@ -94,14 +91,9 @@ function addProduct(product){
     console.log(localStorage.shoppingcart);
 }
 
-<<<<<<< HEAD
 console.log(shoppingcart);
 
 
 
 
-=======
-console.log(shoppingcart.length);
-        
->>>>>>> df32c7b0d64da393f1413ed56f0d6ae9bddb5b5b
     
