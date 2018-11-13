@@ -1,6 +1,8 @@
 .navbar {
     background-color: #212121;
     height: 4em;
+    position: fixed;
+    width: 100%;
  }
  .navbar-brand{
     color: white;
@@ -17,36 +19,19 @@
     margin-top: 0.67em;
     margin-right: 0.3em;
  }
- 
- ul{
- list-style: none;
- border: 1em;
- }
- 
- .Delete{
-    float: left;
-    color: white;
-    font-size: 0.7em;
-    padding: 0.5em;
-    text-align: center;
- }
- 
- .kundvagn{
-    float: left;
-    font-size: 0.7em;
-    padding: 0.5em;
- }
- 
  img{
-    width: 10em;
+    width: 10em; 
+    height: 15em;
+    object-fit: scale-down;
  }
+ 
  p{
     color: darkslategrey;
  }
  
  h1{
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     font-family: Verdana;
  }
  
@@ -54,51 +39,34 @@
     text-align: center;
     font-size: 40px;
     color: #212121;
- }
- #QuantityProducts{
-    margin-top: 2em;
-    margin-bottom: 3em;
-    font-size: 0.90em;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
- }
- .kundvagnContainer{
-    width: 100%;
-    text-align: center;
- }
- .kundvagnContainer .cart2 fas fa-shopping-cart{
-    color: black;
-    font-size: 2em;
-    font-family: Arial, Helvetica, sans-serif;
- }
- 
- .knappContainer{
-    width: 100%;
-    text-align: center;
- }
- 
- .btn-info {
-    color: #fff;
-    background-color: #4db8ff;
-    border-color:#4db8ff;
- }
- 
+    padding-top: 80px;
+ } 
  .users{
     text-align: center;
     font-size: 60px;
     color: #212121;
     float: left;
-<<<<<<< HEAD
  }
-=======
-    
+ .allProducts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.users{
+.product{
+    background-color: #F5F5F5;
+    border: solid 2px #5596F5;
+    border-radius: 10px;
     text-align: center;
-    font-size: 60px; 
-    color: #212121;
-    float: left;
 }
->>>>>>> 2b9a5740b1c9ad9829caa9b043c1524e8d271242
+.btn-light {
+   color: #212529;
+   background-color: white;
+   border-color: white;
+}
+.btn-danger {
+    border-radius: 10px;
+    text-align: center;
+    width: 9em;
+    height: 2em;
+    margin: auto;
+}
