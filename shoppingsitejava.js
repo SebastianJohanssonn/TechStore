@@ -1,38 +1,23 @@
-function listLoaded() {
-    if (!("shoppingcart" in localStorage)){
-        localStorage.setItem("shoppingcart","[]");
-    }
-    var productInCart = localStorage.getItem("shoppingcart");
-    var productCartList = JSON.parse(productInCart);
+var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
 
+function listLoaded() {
     
-    cartProductsWeb(productCartList);
-    /* calculator(); */
-    
+    cartProducts();
 
 
 }
-function cartProductsWeb(productInCart){
+function cartProducts(){
     
     var productDiv = document.createElement("div");
-    var productsInRow = document.createElement("div");
     var mainProductAll = document.getElementById("allProducts");
 
-    productsInRow = productsInline();
-
-    for(var i = 0; i < productInCart; i++) {
-        allproductdiv(productInCart[i]);
-        titlesList(productInCart[i]);
-        priceList(productInCart[i]);
-        imageList(productInCart[i]);
-        
-        productsInRow.appendChild(allproductdiv);
+    console.log(cartItems)
+    for(var i = 0; i < cartItems.length; i++) {
+        var product = createCart(cartItems[i]);
+        productDiv.appendChild(product);
     }
-    productDiv.appendChild(productsInRow);
-    mainProductAll.appendChild(productsInRow);
 
-    
-
+    mainProductAll.appendChild(productDiv);
 }
 /* function calculator() {
     var numOfProducts = document.getElementById("cart1");
@@ -41,35 +26,24 @@ function cartProductsWeb(productInCart){
     numOfProducts.innerText = JsonCart.length;
     
 } */
-function productsInline(){
-    inlineProducts = document.createElement("div");
-    inlineProducts.classList.add("container", "justify-content-center", "divRow");
-    return inlineProducts;
-}
-function titlesList(productInCart){
-    var productTitles =documnet.createElement("h1");
-    productTitles.innerText = productInCart.title;
-    allproductdiv.appendChild(productTitles);
-    return productTitles;
-}
-function priceList(productInCart){
+function createCart(product){
+    console.log(product);
+    var productContainer = document.createElement("div");
+    productContainer.className = "product";
+
+    var productTitles = document.createElement("h1");
+    productTitles.innerText = product.title;
+    productContainer.appendChild(productTitles);
+
     var productPrices = document.createElement("h5");
-    productPrices.innerText = productInCart.price + "kr";
-    allproductdiv.appendChild(productPrices);
-    return productPrices;
-}
-function imageList(productInCart){
-    var productimages = document.createElement("img");
-    productimages.innerText = productInCart.images;
-    allproductdiv.appendChild(productimages);
-    return productimages
+    productPrices.innerText = product.price + "kr";
+    productContainer.appendChild(productPrices);
     
-}
-function addProduct(product){
-    shoppingcart.push(product);
-    var shoppingcartString = JSON.stringify(shoppingcart);
-    localStorage.shoppingcart = shoppingcartString;
-    console.log(localStorage.shoppingcart);
+    var productimages = document.createElement("img");
+    productimages.src = "./assets/" + product.image;
+    productContainer.appendChild(productimages);
+    
+    return productContainer;
 }
 
 
