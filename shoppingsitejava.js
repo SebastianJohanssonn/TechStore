@@ -4,7 +4,7 @@ function listLoaded() {
     
     createHeader();
     cartProducts();
-
+    createCheckout();
 }
 function cartProducts(){
     
@@ -22,10 +22,15 @@ function cartProducts(){
 function createHeader(){
 
     var headerDiv = document.createElement("div");
+    headerDiv.className = "headerDiv";
     var header = document.createElement("h1");
+    var headerText = document.createTextNode(" Kundvagn");
+    header.className = "cartHeader";
     var cartIcon = document.createElement("i");
     cartIcon.className = "cart2 fas fa-shopping-cart";
-    headerDiv.appendChild(cartIcon);
+    
+    header.appendChild(cartIcon);
+    header.appendChild(headerText);
     headerDiv.appendChild(header);
     document.getElementById("allProducts").appendChild(headerDiv);
 }
@@ -58,6 +63,29 @@ function createCart(product){
     
     
     return productContainer;
+}
+
+function createCheckout(){
+    var checkoutText = document.createElement("p");
+    checkoutText.className = "totalpris";
+    var totalPrice = document.createTextNode("Totalpris: " + "" + "kr");
+    
+    checkoutText.appendChild(totalPrice);
+    document.getElementById("allProducts").appendChild(checkoutText);
+    
+    createPurchaseButton();
+}
+
+function createPurchaseButton(){
+    var purchase = document.createElement("button");
+    var purchaseIcon = document.createElement("i");
+    purchaseIcon.className = "fas fa-check";
+    var purchaseText = document.createTextNode(" Slutför ditt köp");
+    purchase.className = "btn btn-primary";
+
+    purchase.appendChild(purchaseIcon);
+    purchase.appendChild(purchaseText);
+    document.getElementById("allProducts").appendChild(purchase);
 }
 
 
