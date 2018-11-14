@@ -2,6 +2,7 @@ var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
 
 function listLoaded() {
     
+    createHeader();
     cartProducts();
 
 }
@@ -14,8 +15,19 @@ function cartProducts(){
         var product = createCart(cartItems[i]);
         productDiv.appendChild(product);
     }
-
     mainProductAll.appendChild(productDiv);
+
+}
+
+function createHeader(){
+
+    var headerDiv = document.createElement("div");
+    var header = document.createElement("h1");
+    var cartIcon = document.createElement("i");
+    cartIcon.className = "cart2 fas fa-shopping-cart";
+    headerDiv.appendChild(cartIcon);
+    headerDiv.appendChild(header);
+    document.getElementById("allProducts").appendChild(headerDiv);
 }
 
 function createCart(product){    
