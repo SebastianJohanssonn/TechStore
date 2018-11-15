@@ -5,7 +5,10 @@ function listLoaded() {
     createHeader();
     cartProducts();
     createCheckout();
+    totpris();
+    
 }
+//Function for printing out the phones on the web page.
 function cartProducts(){
     
     var productDiv = document.createElement("div");
@@ -18,7 +21,7 @@ function cartProducts(){
     mainProductAll.appendChild(productDiv);
 
 }
-
+//Function for creating the header.
 function createHeader(){
 
     var headerDiv = document.createElement("div");
@@ -34,7 +37,7 @@ function createHeader(){
     headerDiv.appendChild(header);
     document.getElementById("allProducts").appendChild(headerDiv);
 }
-
+//Function for creating each product from localstorage.
 function createCart(product){    
 
     var productContainer = document.createElement("div");
@@ -64,18 +67,17 @@ function createCart(product){
     
     return productContainer;
 }
-
+//Function for creating the the totalprice text and printing the button.
 function createCheckout(){
-    var checkoutText = document.createElement("p");
-    checkoutText.className = "totalpris";
-    var totalPrice = document.createTextNode("Totalpris: " + "" + "kr");
     
-    checkoutText.appendChild(totalPrice);
+    var checkoutText = document.createElement("p");
+    checkoutText.id = "totalpris";
+    checkoutText.innerText = "Totalpris:";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
 }
-
+//Function for creating the confirm purchase button.
 function createPurchaseButton(){
     var purchase = document.createElement("button");
     var purchaseIcon = document.createElement("i");
@@ -87,6 +89,16 @@ function createPurchaseButton(){
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
 }
+
+function totpris(){
+    var total = 0;
+    for(var i = 0; i < cartItems.length; i ++){
+        total += cartItems[i].price;
+    }
+    document.getElementById("totalpris").append(total + "kr")
+
+}
+
 
 
 

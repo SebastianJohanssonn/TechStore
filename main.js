@@ -84,7 +84,8 @@ if (localStorage.shoppingcart){
 }
 
 function addProduct(product){
-    document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
+    var numberOfProducts = 1;
+    document.getElementById("numberOfProducts").innerHTML = numberOfProducts + shoppingcart.length;
     shoppingcart.push(product);
     var shoppingcartString = JSON.stringify(shoppingcart);
     localStorage.shoppingcart = shoppingcartString;
