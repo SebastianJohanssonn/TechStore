@@ -71,13 +71,6 @@ function addProductsToWebpage() {
         return productInfoContainer;
     }
 
-    function calculator(price) {
-        var price = listOfProducts.price
-        document.getElementById("numberOfProducts").innerHTML = "total Price" + price
-        console.log()
-    }
-
-
 var shoppingcart = [];
 if (localStorage.shoppingcart){
     shoppingcart = JSON.parse(localStorage.shoppingcart);
@@ -91,8 +84,6 @@ function addProduct(product){
     localStorage.shoppingcart = shoppingcartString;
     console.log(localStorage.shoppingcart);
 }
-
-console.log(shoppingcart);
 
 
 
