@@ -61,9 +61,10 @@ function createCart(product){
     removeIcon.className = "fas fa-trash-alt";
     removeButton.appendChild(removeIcon);
     var buttonText = document.createTextNode(" Ta bort");
+    removeButton.onclick = deletePhone.bind(undefined, product);
     removeButton.appendChild(buttonText);
+
     productContainer.appendChild(removeButton);
-    
     
     return productContainer;
 }
@@ -77,6 +78,8 @@ function createCheckout(){
     
     createPurchaseButton();
 }
+
+
 //Function for creating the confirm purchase button.
 function createPurchaseButton(){
     var purchase = document.createElement("button");
@@ -92,13 +95,30 @@ function createPurchaseButton(){
 
 function totpris(){
     var total = 0;
-    for(var i = 0; i < cartItems.length; i ++){
-        total += cartItems[i].price;
+    for(var i = 0; i < createCheckout.length; i ++){
+        total += createCheckout[i].price;
     }
     document.getElementById("totalpris").append(total + "kr")
 
 }
 
+/* function deletePhone(removeButton) {
+     createCheckout.splice();  
+    if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) - 1;
+        document.querySelector(".number-of-orders").innerHTML = localStorage.clickcount;
+    }
 
-
-
+    //var tempShopingCart = []
+    for (var i = 0; i < createCheckout.length; i--) {
+        
+        if (product.title == createCheckout[i].title) {
+            createCheckout.splice(i, 1);
+            break;
+        }
+    }
+    var phoneArray = JSON.stringify(createCheckout);
+    localStorage.createCheckout = phoneArray;
+    removeButton();
+}
+ */
