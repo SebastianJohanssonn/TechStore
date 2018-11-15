@@ -1,2 +1,2 @@
 # TechStore
-try out demo [here](https://SebastianJohanssonn.github.io/TechStore/)
+try out demo [here](https://sebastianjohanssonn.github.io/TechStore/)
