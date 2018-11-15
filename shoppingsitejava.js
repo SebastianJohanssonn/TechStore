@@ -5,6 +5,8 @@ function listLoaded() {
     createHeader();
     cartProducts();
     createCheckout();
+    totpris();
+    
 }
 //Function for printing out the phones on the web page.
 function cartProducts(){
@@ -67,10 +69,10 @@ function createCart(product){
 }
 //Function for creating the the totalprice text and printing the button.
 function createCheckout(){
-    var checkoutText = document.createElement("p");
-    checkoutText.className = "totalpris";
-    checkoutText.innerText = "Totalpris: " + "" + "kr";
     
+    var checkoutText = document.createElement("p");
+    checkoutText.id = "totalpris";
+    checkoutText.innerText = "Totalpris:";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
@@ -86,6 +88,15 @@ function createPurchaseButton(){
     purchase.appendChild(purchaseIcon);
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
+}
+
+function totpris(){
+    var total = 0;
+    for(var i = 0; i < cartItems.length; i ++){
+        total += cartItems[i].price;
+    }
+    document.getElementById("totalpris").append(total + "kr")
+
 }
 
 
