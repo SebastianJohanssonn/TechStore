@@ -1,6 +1,8 @@
 .navbar {
     background-color: #212121;
     height: 4em;
+    position: fixed;
+    width: 100%;
 }
 .navbar-brand {
     color: white;

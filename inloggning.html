@@ -11,13 +11,23 @@
         <link rel="stylesheet" href="./inloggning.css"/>
         <title>TechStore</title>
     </head>
+    <header>
+        <nav class="navbar navbar-expand">
+            <div class="navbar-collapse">
+                <a class="navbar-brand mb-0 h1" href="./index.html">TechStore</a>
+            </div>
+            <span id="numberOfProducts"></span>
+            <a class="users" href="./inloggning.html"><i class="far fa-user"></i></a>
+            <a class="cart" href="./shoppingcart.html"><i class="cart fas fa-shopping-cart"></i></a>
+        </nav>
+</header>
     <body style>
        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
          <div id="id01" class="modal">
             <form class="modal-content animate" action="/action_page.php">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                      <img src="lägg bild här" alt="Avatar" class="avatar" />
+                      <img src="mockups/welcome.PNG" alt="Avatar" class="avatar" />
                     </div>
                 
                     <div class="container">
@@ -56,23 +66,11 @@
               <label>
                 <input type="checkbox" checked="checked" name="remember" /> Remember me
               </label>
-              
-              <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
           
               <div class="clearfix">
                 <button type="button" class="cancelbtn">Cancel</button>
                 <button type="submit" class="signupbtn">Sign Up</button>
               </div>
-        <header>
-            <nav class="navbar navbar-expand">
-                <div class="navbar-collapse">
-                    <a class="navbar-brand mb-0 h1" href="./index.html">TechStore</a>
-                </div>
-                <span id="numberOfProducts"></span>
-                <a class="users" href="./inloggning.html"><i class="far fa-user"></i></a>
-                <a class="cart" href="./shoppingcart.html"><i class="cart fas fa-shopping-cart"></i></a>
-            </nav>
-    </header>
     
     <main>
 
