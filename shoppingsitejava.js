@@ -1,7 +1,7 @@
-var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
+var cartItems = JSON.parse(localStorage.shoppingcart);
 
 function listLoaded() {
-    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+    
     createHeader();
     cartProducts();
     createCheckout();
@@ -39,10 +39,11 @@ function createHeader(){
 
 }
 //Function for creating each product from localstorage.
-function createCart(product){    
+function createCart(product) {    
 
     var productContainer = document.createElement("div");
     productContainer.className = "product";
+    productContainer.setAttribute("value", product.title);
 
     var productimages = document.createElement("img");
     productimages.src = "./assets/" + product.image;
@@ -58,6 +59,7 @@ function createCart(product){
 
     var removeButton = document.createElement("button");
     removeButton.className = "btn btn-danger";
+    removeButton.onclick = deletePhone.bind(removeButton, product);
     var removeIcon = document.createElement("i");
     removeIcon.className = "fas fa-trash-alt";
     removeButton.appendChild(removeIcon);
@@ -65,7 +67,8 @@ function createCart(product){
     removeButton.appendChild(buttonText);
     productContainer.appendChild(removeButton);
     
-    
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+
     return productContainer;
 }
 //Function for creating the the totalprice text and printing the button.
@@ -73,7 +76,6 @@ function createCheckout(){
     
     var checkoutText = document.createElement("p");
     checkoutText.id = "totalpris";
-    checkoutText.innerText = "Totalpris: ";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
@@ -92,19 +94,31 @@ function createPurchaseButton(){
     document.getElementById("allProducts").appendChild(purchase);
 }
 //Function for calculating and displaying the totalprice.
-function totpris(){
+function totpris() {
     var total = 0;
-    for(var i = 0; i < cartItems.length; i ++){
+    for (var i = 0; i < cartItems.length; i ++) {
         total += cartItems[i].price;
     }
-    document.getElementById("totalpris").append(total + "kr")
+    var price = document.getElementById("totalpris")
+    price.innerText = "Totalpris: " + total + "kr";
 }
-//Showing that your pruchase has been confirmed when clicking the pruchase button.
-function purchaseConfirmed(){
+//Showing that your purchase has been confirmed when clicking the purchase button.
+function purchaseConfirmed() {
     alert("Köp bekräftat");
 }
-console.log(cartItems);
-
+//Delete the selected phone from the cart and update localstorage.
+function deletePhone(product) {
+    for (var i = 0; i < cartItems.length; i++) {
+        if (product === cartItems[i]){
+            cartItems.splice(i, 1);
+        }
+    }
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+    this.parentNode.remove();
+    totpris();
+    localStorage.shoppingcart = JSON.stringify(cartItems);
+    
+}
 
 
 
