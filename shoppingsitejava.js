@@ -5,6 +5,8 @@ function listLoaded() {
     createHeader();
     cartProducts();
     createCheckout();
+    totpris();
+    
 }
 function cartProducts(){
     
@@ -66,11 +68,10 @@ function createCart(product){
 }
 
 function createCheckout(){
-    var checkoutText = document.createElement("p");
-    checkoutText.className = "totalpris";
-    var totalPrice = document.createTextNode("Totalpris: " + "" + "kr");
     
-    checkoutText.appendChild(totalPrice);
+    var checkoutText = document.createElement("p");
+    checkoutText.id = "totalpris";
+    checkoutText.innerText = "Totalpris:";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
@@ -86,6 +87,15 @@ function createPurchaseButton(){
     purchase.appendChild(purchaseIcon);
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
+}
+
+function totpris(){
+    var total = 0;
+    for(var i = 0; i < cartItems.length; i ++){
+        total += cartItems[i].price;
+    }
+    document.getElementById("totalpris").append(total + "kr")
+
 }
 
 
