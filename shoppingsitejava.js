@@ -1,7 +1,6 @@
 var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
 
 function listLoaded() {
-    
     createHeader();
     cartProducts();
     createCheckout();
@@ -36,6 +35,7 @@ function createHeader(){
     header.appendChild(headerText);
     headerDiv.appendChild(header);
     document.getElementById("allProducts").appendChild(headerDiv);
+
 }
 //Function for creating each product from localstorage.
 function createCart(product){    
@@ -72,7 +72,7 @@ function createCheckout(){
     
     var checkoutText = document.createElement("p");
     checkoutText.id = "totalpris";
-    checkoutText.innerText = "Totalpris:";
+    checkoutText.innerText = "Totalpris: ";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
@@ -81,22 +81,26 @@ function createCheckout(){
 function createPurchaseButton(){
     var purchase = document.createElement("button");
     var purchaseIcon = document.createElement("i");
-    purchaseIcon.className = "fas fa-check";
     var purchaseText = document.createTextNode(" Slutför ditt köp");
     purchase.className = "btn btn-primary";
+    purchase.addEventListener("click", function() { purchaseConfirmed()} );
+    purchaseIcon.className = "fas fa-check";
 
     purchase.appendChild(purchaseIcon);
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
 }
-
+//Function for calculating and displaying the totalprice.
 function totpris(){
     var total = 0;
     for(var i = 0; i < cartItems.length; i ++){
         total += cartItems[i].price;
     }
     document.getElementById("totalpris").append(total + "kr")
-
+}
+//Showing that your pruchase has been confirmed when clicking the pruchase button.
+function purchaseConfirmed(){
+    alert("Köp bekräftat");
 }
 
 
