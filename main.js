@@ -1,4 +1,5 @@
 var listOfProducts;
+var shoppingcart = [];
 
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
@@ -71,7 +72,6 @@ function addProductsToWebpage() {
         return productInfoContainer;
     }
 
-var shoppingcart = [];
 if (localStorage.shoppingcart){
     shoppingcart = JSON.parse(localStorage.shoppingcart);
 }

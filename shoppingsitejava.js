@@ -1,4 +1,4 @@
-var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
+var cartItems = JSON.parse(localStorage.shoppingcart);
 
 function listLoaded() {
     
@@ -10,10 +10,10 @@ function listLoaded() {
 }
 //Function for printing out the phones on the web page.
 function cartProducts(){
-    
     var productDiv = document.createElement("div");
-    var mainProductAll = document.getElementById("allProducts");
     productDiv.className = "allProducts";
+    
+    var mainProductAll = document.getElementById("allProducts");
     for(var i = 0; i < cartItems.length; i++) {
         var product = createCart(cartItems[i]);
         productDiv.appendChild(product);
@@ -36,12 +36,14 @@ function createHeader(){
     header.appendChild(headerText);
     headerDiv.appendChild(header);
     document.getElementById("allProducts").appendChild(headerDiv);
+
 }
 //Function for creating each product from localstorage.
-function createCart(product){    
+function createCart(product) {    
 
     var productContainer = document.createElement("div");
     productContainer.className = "product";
+    productContainer.setAttribute("value", product.title);
 
     var productimages = document.createElement("img");
     productimages.src = "./assets/" + product.image;
@@ -57,6 +59,7 @@ function createCart(product){
 
     var removeButton = document.createElement("button");
     removeButton.className = "btn btn-danger";
+    removeButton.onclick = deletePhone.bind(removeButton, product);
     var removeIcon = document.createElement("i");
     removeIcon.className = "fas fa-trash-alt";
     removeButton.appendChild(removeIcon);
@@ -66,6 +69,11 @@ function createCart(product){
 
     productContainer.appendChild(removeButton);
     
+<<<<<<< HEAD
+=======
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+
+>>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
     return productContainer;
 }
 //Function for creating the the totalprice text and printing the button.
@@ -73,7 +81,6 @@ function createCheckout(){
     
     var checkoutText = document.createElement("p");
     checkoutText.id = "totalpris";
-    checkoutText.innerText = "Totalpris:";
     document.getElementById("allProducts").appendChild(checkoutText);
     
     createPurchaseButton();
@@ -84,23 +91,47 @@ function createCheckout(){
 function createPurchaseButton(){
     var purchase = document.createElement("button");
     var purchaseIcon = document.createElement("i");
-    purchaseIcon.className = "fas fa-check";
     var purchaseText = document.createTextNode(" Slutför ditt köp");
     purchase.className = "btn btn-primary";
+    purchase.addEventListener("click", function() { purchaseConfirmed()} );
+    purchaseIcon.className = "fas fa-check";
 
     purchase.appendChild(purchaseIcon);
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
 }
-
-function totpris(){
+//Function for calculating and displaying the totalprice.
+function totpris() {
     var total = 0;
+<<<<<<< HEAD
     for(var i = 0; i < createCheckout.length; i ++){
         total += createCheckout[i].price;
+=======
+    for (var i = 0; i < cartItems.length; i ++) {
+        total += cartItems[i].price;
+>>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
     }
-    document.getElementById("totalpris").append(total + "kr")
-
+    var price = document.getElementById("totalpris")
+    price.innerText = "Totalpris: " + total + "kr";
 }
+//Showing that your purchase has been confirmed when clicking the purchase button.
+function purchaseConfirmed() {
+    alert("Köp bekräftat");
+}
+//Delete the selected phone from the cart and update localstorage.
+function deletePhone(product) {
+    for (var i = 0; i < cartItems.length; i++) {
+        if (product === cartItems[i]){
+            cartItems.splice(i, 1);
+        }
+    }
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
+    this.parentNode.remove();
+    totpris();
+    localStorage.shoppingcart = JSON.stringify(cartItems);
+    
+}
+<<<<<<< HEAD
 
 /* function deletePhone(removeButton) {
      createCheckout.splice();  
@@ -108,6 +139,8 @@ function totpris(){
         localStorage.clickcount = Number(localStorage.clickcount) - 1;
         document.querySelector(".number-of-orders").innerHTML = localStorage.clickcount;
     }
+=======
+>>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
 
     //var tempShopingCart = []
     for (var i = 0; i < createCheckout.length; i--) {
