@@ -1,6 +1,7 @@
 var cartItems = JSON.parse(localStorage.getItem('shoppingcart'));
 
 function listLoaded() {
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
     createHeader();
     cartProducts();
     createCheckout();
@@ -9,10 +10,10 @@ function listLoaded() {
 }
 //Function for printing out the phones on the web page.
 function cartProducts(){
-    
     var productDiv = document.createElement("div");
-    var mainProductAll = document.getElementById("allProducts");
     productDiv.className = "allProducts";
+    
+    var mainProductAll = document.getElementById("allProducts");
     for(var i = 0; i < cartItems.length; i++) {
         var product = createCart(cartItems[i]);
         productDiv.appendChild(product);
@@ -102,6 +103,7 @@ function totpris(){
 function purchaseConfirmed(){
     alert("Köp bekräftat");
 }
+console.log(cartItems);
 
 
 
