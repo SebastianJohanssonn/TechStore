@@ -13,11 +13,12 @@ function loadProducts() {
     });
 }
 
-
+//Onload function for displaying phones.
 function initSite() {
     loadProducts();
     
 }
+
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
         var productDivs = document.createElement("div");
@@ -30,6 +31,7 @@ function addProductsToWebpage() {
         document.querySelector("main").appendChild(productDivs);
         
 }
+
 //Creating each individual phone.
 function createProductInfo(product) {
     var productInfoContainer = document.createElement("div");
@@ -64,10 +66,12 @@ function createProductInfo(product) {
         
     return productInfoContainer;
 }
+
 //Parsing localstorage if there is one.
 if (localStorage.shoppingcart) {
     shoppingcart = JSON.parse(localStorage.shoppingcart);
 }
+
 //Adding phone to cart, array and saves it to localstorage.
 function addProduct(product) {
     var numberOfProducts = 1;
