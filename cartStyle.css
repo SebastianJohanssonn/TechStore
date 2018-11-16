@@ -69,7 +69,8 @@
 }
 #totalpris{
    text-align: center;
-   font-weight: 900;
+   font-weight: bold;
+   margin-top: 1em;
 }
 .btn-primary {
    margin: 2em auto;
