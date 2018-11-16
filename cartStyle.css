@@ -21,6 +21,7 @@
     color: #FFFFFF;
     font-size: 1.4em;
     margin-top: 0.2em;
+    padding-right: 0.3em;
  }
  img{
     width: 10em; 
@@ -42,12 +43,6 @@
     color: #212121;
     padding-top: 80px;
  } 
- .users{
-    text-align: center;
-    font-size: 60px;
-    color: #212121;
-    float: left;
- }
  .allProducts{
     display: flex;
     flex-direction: row;
@@ -75,4 +70,51 @@
 .btn-primary {
    margin: 2em auto;
    display: block;
+   border-radius: 6px;
 }
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+{
+   .navbar {
+      height: 6em;
+  }
+
+  .navbar-brand{
+      font-size: 2.3em;
+  }
+
+  #numberOfProducts {
+      font-size: 1.7em;
+  }
+
+  .cart {
+      font-size: 1.8em;
+  }
+
+  .headerDiv{
+     padding-top: 3em;
+  }
+
+  .cart2 {
+   font-size: 0.9em;
+  }
+
+  .cartHeader {
+     font-size: 4em;
+  }
+
+  .product h2 {
+     font-size: 2.3em;
+  }
+
+  #totalpris {
+     font-size: 1.5em;
+  }
+
+  .btn-primary {
+      font-size: 1.5em;
+
+  }
+}
+
