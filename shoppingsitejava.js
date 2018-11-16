@@ -1,7 +1,7 @@
 var cartItems = JSON.parse(localStorage.shoppingcart);
 
 function listLoaded() {
-    
+    cartCounter();
     createHeader();
     cartProducts();
     createCheckout();
@@ -21,6 +21,11 @@ function cartProducts() {
     }
     mainProductAll.appendChild(productDiv);
 
+}
+
+//Creating number of items in cart.
+function cartCounter(){
+    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
 }
 
 //Function for creating the header.
@@ -105,7 +110,7 @@ function totpris() {
         total += cartItems[i].price;
     }
     var price = document.getElementById("totalpris")
-    price.innerText = "Totalpris: " + total + "kr";
+    price.innerText = "Totalt pris: " + total + "kr";
 }
 
 //Showing that your purchase has been confirmed when clicking the purchase button.
@@ -120,10 +125,9 @@ function deletePhone(product) {
             cartItems.splice(i, 1);
         }
     }
-    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
     this.parentNode.remove();
     totpris();
     localStorage.shoppingcart = JSON.stringify(cartItems);
-    
+    cartCounter();
 }
 
