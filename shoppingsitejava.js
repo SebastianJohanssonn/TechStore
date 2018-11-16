@@ -116,6 +116,10 @@ function totpris() {
 //Showing that your purchase has been confirmed when clicking the purchase button.
 function purchaseConfirmed() {
     alert("Köp bekräftat");
+    var numberZero = document.getElementById("numberOfProducts");
+    numberZero.remove();
+    var productRemove = document.getElementById("allProducts");
+    productRemove.remove();
     window.localStorage.clear();
 
 }
