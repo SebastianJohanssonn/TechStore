@@ -17,6 +17,7 @@ a:hover {
 
 #numberOfProducts {
     color: #ffffff;
+    padding-right: 0.3em;
 }
 .cart {
     color: #ffffff;
@@ -25,6 +26,8 @@ a:hover {
 }
 img {
     width: 10em;
+    height: 17em;
+    object-fit: scale-down;
 }
 
 main {
@@ -45,7 +48,7 @@ main {
     height: 100%;
     text-align: center;
     padding: 4em 0;
-    margin: 0;
+    margin: auto;
 }
 img {
     width: 13em;                                                              
@@ -53,20 +56,64 @@ img {
 p {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-    width: 13em;
+    width: 15em;
     margin: auto;
 }
 .btn-primary {
     border-radius: 0.5em;
     text-align: center;
 }
+
 .cart2 {
     margin: auto;
     float: left;
     padding: 0.3em 0.4em;
     font-size: 1em;
 }
-.fa-shopping-cart:before {
-    content: "\f07a";
-    font-size: 22px;
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+{
+    .navbar {
+        height: 6em;
+    }
+
+    .navbar-brand{
+        font-size: 2.3em;
+    }
+
+    .users {
+        font-size: 1.5em;
+    }
+
+    #numberOfProducts {
+        font-size: 1.7em;
+    }
+
+    .cart {
+        font-size: 1.5em;
+    }
+
+    img{
+        width: 20em;
+        height: 30em;
+    }
+
+    .productInfoContainer{
+        margin-top: 3em;
+    }
+
+    h1{
+        font-size: 4em;
+    }
+    
+    p {
+        width: 20em;
+        font-size: 1.5em;
+    }
+
+    .btn-primary {
+        height: 3em;
+        font-size: 1.5em;
+    }
 }
