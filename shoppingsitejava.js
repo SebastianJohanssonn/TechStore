@@ -64,7 +64,6 @@ function createCart(product) {
     removeIcon.className = "fas fa-trash-alt";
     removeButton.appendChild(removeIcon);
     var buttonText = document.createTextNode(" Ta bort");
-    removeButton.onclick = deletePhone.bind(undefined, product);
     removeButton.appendChild(buttonText);
 
     productContainer.appendChild(removeButton);
@@ -98,8 +97,8 @@ function createPurchaseButton(){
 //Function for calculating and displaying the totalprice.
 function totpris() {
     var total = 0;
-    for(var i = 0; i < createCheckout.length; i ++){
-        total += createCheckout[i].price;
+    for(var i = 0; i < cartItems.length; i ++){
+        total += cartItems[i].price;
     }
     var price = document.getElementById("totalpris")
     price.innerText = "Totalpris: " + total + "kr";
