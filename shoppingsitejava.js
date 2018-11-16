@@ -1,5 +1,6 @@
 var cartItems = JSON.parse(localStorage.shoppingcart);
 
+//Onload function for displaying all of the information.
 function listLoaded() {
     cartCounter();
     createHeader();
@@ -24,7 +25,7 @@ function cartProducts() {
 }
 
 //Creating number of items in cart.
-function cartCounter(){
+function cartCounter() {
     document.getElementById("numberOfProducts").innerHTML = cartItems.length;
 }
 
@@ -95,7 +96,9 @@ function createPurchaseButton() {
     var purchaseIcon = document.createElement("i");
     var purchaseText = document.createTextNode(" Slutför ditt köp");
     purchase.className = "btn btn-primary";
-    purchase.addEventListener("click", function() { purchaseConfirmed()} );
+    purchase.addEventListener("click", function() { 
+        purchaseConfirmed() 
+    });
     purchaseIcon.className = "fas fa-check";
 
     purchase.appendChild(purchaseIcon);
@@ -106,6 +109,7 @@ function createPurchaseButton() {
 //Function for calculating and displaying the totalprice.
 function totpris() {
     var total = 0;
+
     for(var i = 0; i < cartItems.length; i ++){
         total += cartItems[i].price;
     }

@@ -56,7 +56,9 @@ function createProductInfo(product) {
     var cartButton = document.createElement("button");
     cartButton.className = "btn btn-primary";
     cartButton.setAttribute("id", "addProduct");
-    cartButton.addEventListener("click", function() { addProduct(product) });
+    cartButton.addEventListener("click", function() { 
+        addProduct(product) 
+    });
     var cartIcon = document.createElement("i");
     cartIcon.className = "cart2 fas fa-cart-arrow-down";
     cartButton.appendChild(cartIcon);
