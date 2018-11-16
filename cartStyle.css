@@ -32,7 +32,7 @@
     text-align: center;
     font-size: 40px;
     font-family: Verdana;
-    color: black;
+    color: #212121;
     font-weight: bold;
  }
  
@@ -68,8 +68,7 @@
 }
 #totalpris{
    text-align: center;
-   margin: 1em 0;
-   font-weight: bold;
+   font-weight: 900;
 }
 .btn-primary {
    margin: 2em auto;

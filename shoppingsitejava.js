@@ -65,10 +65,9 @@ function createCart(product) {
     removeButton.appendChild(removeIcon);
     var buttonText = document.createTextNode(" Ta bort");
     removeButton.appendChild(buttonText);
+
     productContainer.appendChild(removeButton);
     
-    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
-
     return productContainer;
 }
 //Function for creating the the totalprice text and printing the button.
@@ -80,6 +79,8 @@ function createCheckout(){
     
     createPurchaseButton();
 }
+
+
 //Function for creating the confirm purchase button.
 function createPurchaseButton(){
     var purchase = document.createElement("button");
@@ -96,7 +97,7 @@ function createPurchaseButton(){
 //Function for calculating and displaying the totalprice.
 function totpris() {
     var total = 0;
-    for (var i = 0; i < cartItems.length; i ++) {
+    for(var i = 0; i < cartItems.length; i ++){
         total += cartItems[i].price;
     }
     var price = document.getElementById("totalpris")
@@ -119,6 +120,4 @@ function deletePhone(product) {
     localStorage.shoppingcart = JSON.stringify(cartItems);
     
 }
-
-
 

@@ -1,224 +1,237 @@
 body {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-display: inline-block;
-border: 1px solid #ccc;
-box-sizing: border-box;
-background-color: darkolivegreen;
-}
-
-/* Set a style for all buttons */
-button {
-background-color: #4CAF50;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
-}
-
-button:hover {
-opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-width: auto;
-padding: 10px 18px;
-background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-text-align: center;
-margin: 24px 0 12px 0;
-position: relative;
-}
-
-img.avatar {
-width: 40%;
-border-radius: 50%;
-}
-
-.container {
-padding: 16px;
-}
-
-span.psw {
-float: right;
-padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-display: none; 
-position: fixed; 
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; 
-height: 100%; 
-overflow: auto; 
-background-color: rgb(0,0,0); 
-background-color: rgba(0,0,0,0.4); 
-padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-background-color: #fefefe;
-margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-border: 1px solid #888;
-width: 80%;
-}
-
-/* The Close Button (x) */
-.close {
-position: absolute;
-right: 25px;
-top: 0;
-color: #000;
-font-size: 35px;
-font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-color: red;
-cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
--webkit-animation: animatezoom 0.6s;
-animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-from {-webkit-transform: scale(0)} 
-to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-from {transform: scale(0)} 
-to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-span.psw {
-   display: block;
-   float: none;
-}
-.cancelbtn {
-   width: 100%;
-}
-}
-
-
-
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-.fa-shopping-cart:before {
-    content: "\f07a";
-    color: white;
-}
-
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display:inline-block;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    background-color:#556b2f
+    }
     
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
+    button {
+    background-color:#4CAF50;
+    color:#fff;
+    padding:14px 20px;
+    margin:8px 0;
+    border:none;
+    cursor:pointer;
+    width:100%
     }
+    
+    button:hover {
+    opacity:.8
+    }
+    
     .cancelbtn {
-       width: 100%;
+    width:auto;
+    padding:10px 18px;
+    background-color:#f44336
     }
-}
+    
+    .imgcontainer {
+    text-align:center;
+    margin:24px 0 12px;
+    position:relative
+    }
+    
+    img.avatar {
+    width:40%;
+    border-radius:50%
+    }
+    
+    .container {
+    padding:16px
+    }
+    
+    span.psw {
+    float:right;
+    padding-top:16px
+    }
+    
+    .modal {
+    display:none;
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:#000;
+    background-color:rgba(0,0,0,0.4);
+    padding-top:60px
+    }
+    
+    .modal-content {
+    background-color:#fefefe;
+    margin:5% auto 15%;
+    border:1px solid #888;
+    width:80%
+    }
+    .mb-0, .my-0 {
+        margin-bottom: 0!important;
+        color: #FFFFFF;
+        font-size: 30px;
+        font-family: unset;
+    }
+    
+    .close {
+    position:absolute;
+    right:25px;
+    top:0;
+    color:#000;
+    font-size:35px;
+    font-weight:700
+    }
+    
+    .close:hover,.close:focus {
+    color:#E64E4E;
+    cursor:pointer
+    }
+    
+    .animate {
+    -webkit-animation:animatezoom .6s;
+    animation:animatezoom .6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+    from {
+    -webkit-transform:scale(0)
+    }
+    
+    to {
+    -webkit-transform:scale(1)
+    }
+    }
+    
+    @keyframes animatezoom {
+    from {
+    transform:scale(0)
+    }
+    
+    to {
+    transform:scale(1)
+    }
+    }
+    
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display:block;
+    float:none
+    }
+    
+    .cancelbtn {
+    width:100%
+    }
+    }
+    
+    button:hover {
+    opacity:.8
+    }
+    
+    .cancelbtn {
+    width:auto;
+    padding:10px 18px;
+    background-color:#f44336
+    }
+    
+    .imgcontainer {
+    text-align:center;
+    margin:24px 0 12px;
+    position:relative
+    }
+    
+    img.avatar {
+    width:40%;
+    border-radius:50%
+    }
+    
+    .container {
+    padding:16px
+    }
+    
+    span.psw {
+    float:right;
+    padding-top:16px
+    }
+    
+    .modal {
+    display:none;
+    position:fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color:#000;
+    background-color:rgba(0,0,0,0.4);
+    padding-top:60px
+    }
+    
+    .modal-content {
+    background-color:#fefefe;
+    margin:5% auto 15%;
+    border:1px solid #888;
+    width:80%
+    }
+    
+    .close {
+    position:absolute;
+    right:25px;
+    top:0;
+    color:#000;
+    font-size:35px;
+    font-weight:700
+    }
+    
+    .close:hover,.close:focus {
+    color:#E64E4E;
+    cursor:pointer
+    }
+    
+    .animate {
+    -webkit-animation:animatezoom .6s;
+    animation:animatezoom .6s
+    }
+    .fa-user:before {
+        content: "\f007";
+        font-size: 22px;
+    }
+    
+    .fa-shopping-cart:before {
+    content:"\f07a";
+    color:#fff;
+    font-size: 22px;
+    }
+    
+    @-webkit-keyframes animatezoom {
+    from {
+    -webkit-transform:scale(0)
+    }
+    
+    to {
+    -webkit-transform:scale(1)
+    }
+    }
+    
+    @keyframes animatezoom {
+    from {
+    transform:scale(0)
+    }
+    
+    to {
+    transform:scale(1)
+    }
+    }
+    
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display:block;
+    float:none
+    }
+    
+    .cancelbtn {
+    width:100%
+    }
+    }
