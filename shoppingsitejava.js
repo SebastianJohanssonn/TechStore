@@ -8,8 +8,9 @@ function listLoaded() {
     totpris();
     
 }
+
 //Function for printing out the phones on the web page.
-function cartProducts(){
+function cartProducts() {
     var productDiv = document.createElement("div");
     productDiv.className = "allProducts";
     
@@ -21,8 +22,9 @@ function cartProducts(){
     mainProductAll.appendChild(productDiv);
 
 }
+
 //Function for creating the header.
-function createHeader(){
+function createHeader() {
 
     var headerDiv = document.createElement("div");
     headerDiv.className = "headerDiv";
@@ -38,6 +40,7 @@ function createHeader(){
     document.getElementById("allProducts").appendChild(headerDiv);
 
 }
+
 //Function for creating each product from localstorage.
 function createCart(product) {    
 
@@ -70,8 +73,9 @@ function createCart(product) {
     
     return productContainer;
 }
+
 //Function for creating the the totalprice text and printing the button.
-function createCheckout(){
+function createCheckout() {
     
     var checkoutText = document.createElement("p");
     checkoutText.id = "totalpris";
@@ -80,9 +84,8 @@ function createCheckout(){
     createPurchaseButton();
 }
 
-
 //Function for creating the confirm purchase button.
-function createPurchaseButton(){
+function createPurchaseButton() {
     var purchase = document.createElement("button");
     var purchaseIcon = document.createElement("i");
     var purchaseText = document.createTextNode(" Slutför ditt köp");
@@ -94,6 +97,7 @@ function createPurchaseButton(){
     purchase.appendChild(purchaseText);
     document.getElementById("allProducts").appendChild(purchase);
 }
+
 //Function for calculating and displaying the totalprice.
 function totpris() {
     var total = 0;
@@ -103,14 +107,16 @@ function totpris() {
     var price = document.getElementById("totalpris")
     price.innerText = "Totalpris: " + total + "kr";
 }
+
 //Showing that your purchase has been confirmed when clicking the purchase button.
 function purchaseConfirmed() {
     alert("Köp bekräftat");
 }
+
 //Delete the selected phone from the cart and update localstorage.
 function deletePhone(product) {
     for (var i = 0; i < cartItems.length; i++) {
-        if (product === cartItems[i]){
+        if (product === cartItems[i]) {
             cartItems.splice(i, 1);
         }
     }
