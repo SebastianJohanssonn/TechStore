@@ -69,11 +69,6 @@ function createCart(product) {
 
     productContainer.appendChild(removeButton);
     
-<<<<<<< HEAD
-=======
-    document.getElementById("numberOfProducts").innerHTML = cartItems.length;
-
->>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
     return productContainer;
 }
 //Function for creating the the totalprice text and printing the button.
@@ -103,13 +98,8 @@ function createPurchaseButton(){
 //Function for calculating and displaying the totalprice.
 function totpris() {
     var total = 0;
-<<<<<<< HEAD
     for(var i = 0; i < createCheckout.length; i ++){
         total += createCheckout[i].price;
-=======
-    for (var i = 0; i < cartItems.length; i ++) {
-        total += cartItems[i].price;
->>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
     }
     var price = document.getElementById("totalpris")
     price.innerText = "Totalpris: " + total + "kr";
@@ -131,27 +121,4 @@ function deletePhone(product) {
     localStorage.shoppingcart = JSON.stringify(cartItems);
     
 }
-<<<<<<< HEAD
 
-/* function deletePhone(removeButton) {
-     createCheckout.splice();  
-    if (localStorage.clickcount) {
-        localStorage.clickcount = Number(localStorage.clickcount) - 1;
-        document.querySelector(".number-of-orders").innerHTML = localStorage.clickcount;
-    }
-=======
->>>>>>> 782910bc67fe9264f467eeece51e16e03d43e883
-
-    //var tempShopingCart = []
-    for (var i = 0; i < createCheckout.length; i--) {
-        
-        if (product.title == createCheckout[i].title) {
-            createCheckout.splice(i, 1);
-            break;
-        }
-    }
-    var phoneArray = JSON.stringify(createCheckout);
-    localStorage.createCheckout = phoneArray;
-    removeButton();
-}
- */
