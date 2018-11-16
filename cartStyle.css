@@ -4,32 +4,37 @@
     position: fixed;
     width: 100%;
  }
- .navbar-brand{
+
+ .navbar-brand {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.875em;
     font-family: Arial, Helvetica, sans-serif;
  }
- #numberOfProducts{
+
+ #numberOfProducts {
     color: #F5F5F5;
  }
+
  a:hover {
     color: #FFFFFF;
  }
+
  .cart {
     color: #FFFFFF;
     font-size: 1.4em;
     margin-top: 0.2em;
     padding-right: 0.3em;
  }
- img{
+
+ img {
     width: 10em; 
     height: 15em;
     object-fit: scale-down;
  }
  
- .cartHeader{
+ .cartHeader {
     text-align: center;
     font-size: 40px;
     font-family: Verdana;
@@ -37,41 +42,47 @@
     font-weight: bold;
  }
  
- .cart2{
+ .cart2 {
     text-align: center;
     font-size: 40px;
     color: #212121;
     padding-top: 80px;
- } 
- .allProducts{
+ }
+
+ .allProducts {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
    
 }
-.product{
+
+.product {
     background-color: #F5F5F5;
     border: solid 2px #5596F5;
     border-radius: 10px;
     text-align: center;
     margin: 0.5em;
 }
+
 .btn-danger {
     border-radius: 10px;
     text-align: center;
     margin-bottom: 0.5em;
 }
-#totalpris{
+
+#totalpris {
    text-align: center;
    font-weight: bold;
    margin-top: 1em;
 }
+
 .btn-primary {
    margin: 2em auto;
    display: block;
    border-radius: 6px;
 }
+
 @media only screen 
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
@@ -80,7 +91,7 @@ and (max-device-width: 1024px)
       height: 6em;
   }
 
-  .navbar-brand{
+  .navbar-brand {
       font-size: 2.3em;
   }
 
@@ -92,7 +103,7 @@ and (max-device-width: 1024px)
       font-size: 1.8em;
   }
 
-  .headerDiv{
+  .headerDiv {
      padding-top: 3em;
   }
 
