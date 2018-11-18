@@ -4,6 +4,7 @@
     position: fixed;
     width: 100%;
 }
+
 .navbar-brand {
     color: white;
     text-decoration: none;
@@ -11,6 +12,7 @@
     font-size: 1.875em;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 a:hover {
     color: #ffffff;
 } 
@@ -19,11 +21,13 @@ a:hover {
     color: #ffffff;
     padding-right: 0.3em;
 }
+
 .cart {
     color: #ffffff;
     float: right;
     font-size: 1.25em;
 }
+
 img {
     width: 10em;
     height: 17em;
@@ -34,15 +38,18 @@ main {
     display: flex;
     align-items: center;
 }
+
 .productContainers {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.productInfoContainer:nth-child(odd){
+
+.productInfoContainer:nth-child(odd) {
     background-color: #F5F5F5
 }
+
 .productInfoContainer {
     width: 100%;
     height: 100%;
@@ -50,15 +57,14 @@ main {
     padding: 4em 0;
     margin: auto;
 }
-img {
-    width: 13em;                                                              
-}
+
 p {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     width: 15em;
     margin: auto;
 }
+
 .btn-primary {
     border-radius: 0.5em;
     text-align: center;
@@ -70,6 +76,7 @@ p {
     padding: 0.3em 0.4em;
     font-size: 1em;
 }
+
 @media only screen 
 and (min-device-width: 768px)
 and (max-device-width: 1024px)
@@ -94,16 +101,16 @@ and (max-device-width: 1024px)
         font-size: 1.5em;
     }
 
-    img{
+    img {
         width: 20em;
         height: 30em;
     }
 
-    .productInfoContainer{
+    .productInfoContainer {
         margin-top: 3em;
     }
 
-    h1{
+    h1 {
         font-size: 4em;
     }
     
