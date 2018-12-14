@@ -110,7 +110,7 @@ function createPurchaseButton() {
 function totpris() {
     var total = 0;
 
-    for(var i = 0; i < cartItems.length; i ++){
+    for (var i = 0; i < cartItems.length; i ++) {
         total += cartItems[i].price;
     }
     var price = document.getElementById("totalpris")
