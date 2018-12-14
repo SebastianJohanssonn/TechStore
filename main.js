@@ -15,8 +15,8 @@ function loadProducts() {
 
 //Onload function for displaying phones.
 function initSite() {
+    cartCounter();
     loadProducts();
-    
 }
 
 /** Uses the loaded products data to create a visible product list on the website */
@@ -30,6 +30,10 @@ function addProductsToWebpage() {
         
         document.querySelector("main").appendChild(productDivs);
         
+}
+//Counts and shows the number of items in cart.
+function cartCounter(){
+    document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
 }
 
 //Creating each individual phone.
