@@ -135,28 +135,28 @@ and (min-device-width: 1300px)
 and (max-device-width: 1920px)
 {
     .navbar {
-        height: 8em;
+        height: 6em;
     }
 
     .navbar-brand{
-        font-size: 3em;
+        font-size: 2.3em;
     }
 
     .users {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     #numberOfProducts {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .cart {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 
     img {
-        width: 25em;
-        height: 35em;
+        width: 20em;
+        height: 30em;
     }
 
     .productContainers {
@@ -164,16 +164,16 @@ and (max-device-width: 1920px)
     }
 
     h1 {
-        font-size: 5em;
+        font-size: 3.5em;
     }
     
     p {
         width: 30em;
-        font-size: 2.5em;
+        font-size: 2em;
     }
 
     .btn-primary {
         height: 3em;
-        font-size: 2em;
+        font-size: 1.7em;
     }
 }
