@@ -48,7 +48,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: inline-block;
+    margin-top: 2em;
 }
 
 .productInfoContainer:nth-child(odd) {
@@ -59,9 +59,8 @@ main {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    padding-top: 4em;
-    margin: auto;
     display: inline-block;
+    padding-top: 3em;
 }
 
 p {
