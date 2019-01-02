@@ -15,7 +15,7 @@ function loadProducts() {
 
 //Onload function for displaying phones.
 function initSite() {
-    cartCounter();
+    updateCartCounter();
     loadProducts();
 }
 
@@ -32,7 +32,7 @@ function addProductsToWebpage() {
         
 }
 //Counts and shows the number of items in cart.
-function cartCounter(){
+function updateCartCounter(){
     document.getElementById("numberOfProducts").innerHTML = shoppingcart.length;
 }
 
