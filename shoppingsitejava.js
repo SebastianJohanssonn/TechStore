@@ -1,22 +1,28 @@
-var cartItems = JSON.parse(localStorage.shoppingcart);
+var cartItems;
+if (localStorage.shoppingcart) {
+    cartItems = JSON.parse(localStorage.shoppingcart);
+} else {
+    cartItems = [];
+}
+
 
 //Onload function for displaying all of the information.
 function listLoaded() {
-    cartCounter();
+    updateCartCounter();
     createHeader();
     cartProducts();
     createCheckout();
-    totpris();
-    
+    updateTotpris();
+
 }
 
 //Function for printing out the phones on the web page.
 function cartProducts() {
     var productDiv = document.createElement("div");
     productDiv.className = "allProducts";
-    
+
     var mainProductAll = document.getElementById("allProducts");
-    for(var i = 0; i < cartItems.length; i++) {
+    for (var i = 0; i < cartItems.length; i++) {
         var product = createCart(cartItems[i]);
         productDiv.appendChild(product);
     }
@@ -25,7 +31,7 @@ function cartProducts() {
 }
 
 //Creating number of items in cart.
-function cartCounter() {
+function updateCartCounter() {
     document.getElementById("numberOfProducts").innerHTML = cartItems.length;
 }
 
@@ -39,7 +45,7 @@ function createHeader() {
     header.className = "cartHeader";
     var cartIcon = document.createElement("i");
     cartIcon.className = "cart2 fas fa-shopping-cart";
-    
+
     header.appendChild(cartIcon);
     header.appendChild(headerText);
     headerDiv.appendChild(header);
@@ -48,7 +54,7 @@ function createHeader() {
 }
 
 //Function for creating each product from localstorage.
-function createCart(product) {    
+function createCart(product) {
 
     var productContainer = document.createElement("div");
     productContainer.className = "product";
@@ -57,7 +63,7 @@ function createCart(product) {
     var productimages = document.createElement("img");
     productimages.src = "./assets/" + product.image;
     productContainer.appendChild(productimages);
-    
+
     var productTitles = document.createElement("h2");
     productTitles.innerText = product.title;
     productContainer.appendChild(productTitles);
@@ -76,17 +82,17 @@ function createCart(product) {
     removeButton.appendChild(buttonText);
 
     productContainer.appendChild(removeButton);
-    
+
     return productContainer;
 }
 
 //Function for creating the the totalprice text and printing the button.
 function createCheckout() {
-    
+
     var checkoutText = document.createElement("p");
     checkoutText.id = "totalpris";
     document.getElementById("allProducts").appendChild(checkoutText);
-    
+
     createPurchaseButton();
 }
 
@@ -96,8 +102,8 @@ function createPurchaseButton() {
     var purchaseIcon = document.createElement("i");
     var purchaseText = document.createTextNode(" Slutför ditt köp");
     purchase.className = "btn btn-primary";
-    purchase.addEventListener("click", function() { 
-        purchaseConfirmed() 
+    purchase.addEventListener("click", function () {
+        purchaseConfirmed()
     });
     purchaseIcon.className = "fas fa-check";
 
@@ -107,10 +113,10 @@ function createPurchaseButton() {
 }
 
 //Function for calculating and displaying the totalprice.
-function totpris() {
+function updateTotpris() {
     var total = 0;
 
-    for (var i = 0; i < cartItems.length; i ++) {
+    for (var i = 0; i < cartItems.length; i++) {
         total += cartItems[i].price;
     }
     var price = document.getElementById("totalpris")
@@ -136,8 +142,8 @@ function deletePhone(product) {
         }
     }
     this.parentNode.remove();
-    totpris();
+    updateTotpris();
     localStorage.shoppingcart = JSON.stringify(cartItems);
-    cartCounter();
+    updateCartCounter();
 }
 
